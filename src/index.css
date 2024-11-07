@@ -1,0 +1,575 @@
+/* index.css o App.css */
+@import 'leaflet/dist/leaflet.css';
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Home.css */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.home h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.home h2 {
+  color: #34495e;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.home div.navigation-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.navigation-links a {
+  text-decoration: none;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.navigation-links a:hover {
+  background-color: #2980b9;
+}
+
+.map-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.map-container .leaflet-container {
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+}
+
+
+
+/* CoordinatorPanel.css */
+
+.coordinator-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.coordinator-panel h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.coordinator-panel h3 {
+  color: #34495e;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.coordinator-panel select {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.coordinator-panel .patients-list {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.coordinator-panel .patients-list li {
+  padding: 10px;
+  background-color: #f4f4f4;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coordinator-panel button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.coordinator-panel button:hover {
+  background-color: #c0392b;
+}
+
+.coordinator-panel p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+
+
+/* CoordinatorLogin.css */
+
+.coordinator-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.coordinator-login h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.coordinator-login form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.coordinator-login label {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.coordinator-login input[type="text"],
+.coordinator-login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.coordinator-login button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.coordinator-login button:hover {
+  background-color: #2980b9;
+}
+
+.coordinator-login p {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+
+
+/* PatientLogin.css */
+
+.patient-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.patient-login h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.patient-login form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.patient-login label {
+  font-size: 1rem;
+  color: #34495e;
+  margin-top: 10px;
+}
+
+.patient-login input[type="text"],
+.patient-login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.patient-login button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.patient-login button:hover {
+  background-color: #219150;
+}
+
+
+
+/* styles/Survey.css */
+.survey-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.survey-container h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.survey-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.survey-container label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.survey-container input[type="number"],
+.survey-container textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.survey-container input[type="number"]:focus,
+.survey-container textarea:focus {
+  outline: none;
+  border-color: #66afe9;
+}
+
+.survey-container textarea {
+  min-height: 100px;
+}
+
+.survey-container button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.survey-container button:hover {
+  background-color: #45a049;
+}
+
+.survey-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.survey-container div {
+  margin-bottom: 15px;
+}
+
+.survey-container div:last-child {
+  margin-bottom: 20px;
+}
+
+
+
+/* styles/SecretaryPanel.css */
+.secretary-panel {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secretary-panel h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.secretary-panel h3 {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.secretary-panel p {
+  font-size: 16px;
+  color: #555;
+}
+
+.secretary-panel button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.secretary-panel button:hover {
+  background-color: #45a049;
+}
+
+.secretary-panel button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.secretary-panel .status-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+.secretary-panel div {
+  margin-bottom: 20px;
+}
+
+.secretary-panel div:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* styles/SurveyReports.css */
+.survey-reports {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.survey-reports h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.survey-reports h3 {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.survey-reports select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.survey-reports button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.survey-reports button:hover {
+  background-color: #45a049;
+}
+
+.survey-reports button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.survey-reports ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.survey-reports li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.survey-reports li button {
+  background-color: #3b8d3b;
+  margin: 5px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.survey-reports li button:hover {
+  background-color: #357b35;
+}
+
+.survey-reports li button:disabled {
+  background-color: #a4c8a4;
+}
+
+.survey-reports .status-message {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.survey-reports div {
+  margin-bottom: 20px;
+}
+
+.survey-reports div:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* Contenedor principal de la lista de centros */
+.centers-list {
+  display: flex;
+  flex-wrap: wrap; /* Envuelve los elementos en filas */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+}
+
+/* Tarjeta de cada centro */
+.center-card {
+  border: 1px solid #ddd; /* Borde sutil */
+  padding: 15px;
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  text-align: center; /* Centrar el contenido */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.center-card:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta ligeramente */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
+
+/* Imagen de cada centro */
+.center-card img {
+  width: 100%;
+  height: 150px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  border-radius: 8px;
+}
+
+/* Estilos del nombre del centro */
+.center-card h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Estilos de la dirección */
+.center-card p {
+  font-size: 1em;
+  color: #666;
+  margin-top: 5px;
+}
